@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
 <!DOCTYPE html>
@@ -39,7 +38,14 @@
 	 					</tr>
 
 	 				</thead>
-	 				
+	 				<c:forEach var="cita" items="${citas}">
+	 					<tr>
+	 						<td>${cita.type}</td>
+							<td>${cita.value.id}</td>
+							<td>${cita.value.quote}</td>
+	 					</tr>
+	 				</c:forEach>
+
 	 				<tfoot>
 	 					<tr>
 	 						<th>type</th>
@@ -92,8 +98,7 @@
 							"url" : cdn
 							}
 						});
-					})
-				
+					})			
 	</script>
 	
 </body>

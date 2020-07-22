@@ -14,6 +14,6 @@ public class CitaService {
 	CitaDAO citaDao;
 	
 	public List<Cita> obtenerCitas(){
-		return citaDao.traerTodas();
+		return citaDao.traerTodos();
 	}
 }
